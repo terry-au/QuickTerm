@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		3346B9C4211E4A3E00685BF8 /* OpenInTerminalExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3346B9C3211E4A3E00685BF8 /* OpenInTerminalExtension.m */; };
 		3346B9C9211E4A3E00685BF8 /* OpenInTerminalExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3346B9C0211E4A3E00685BF8 /* OpenInTerminalExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		335E9436211E395800F8A807 /* TerminalServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 335E9435211E395800F8A807 /* TerminalServiceRegistry.m */; };
-		335E9439211E396100F8A807 /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 335E9438211E396100F8A807 /* TerminalService.m */; };
+		3346B9CE211E4DE800685BF8 /* TerminalServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 335E9435211E395800F8A807 /* TerminalServiceRegistry.m */; };
+		3346B9D0211E57B400685BF8 /* Settings.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5AF6D9E6E25808D98B23C6C /* Settings.mm */; };
+		3346B9D2211E588500685BF8 /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF67CA20824F44CEF39C8B /* TerminalService.m */; };
 		33AAD19C20F37D36005E9F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAD19B20F37D36005E9F88 /* AppDelegate.m */; };
 		33AAD19E20F37D37005E9F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AAD19D20F37D37005E9F88 /* Assets.xcassets */; };
 		33AAD1A120F37D37005E9F88 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AAD19F20F37D37005E9F88 /* MainMenu.xib */; };
 		33AAD1A420F37D37005E9F88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAD1A320F37D37005E9F88 /* main.m */; };
+		D5AF6034C1AFBE8E787A7F1D /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF67CA20824F44CEF39C8B /* TerminalService.m */; };
+		D5AF64B4E2B45BFEE21410FF /* Settings.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5AF6D9E6E25808D98B23C6C /* Settings.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +52,6 @@
 		3346B9C6211E4A3E00685BF8 /* OpenInTerminalExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenInTerminalExtension.entitlements; sourceTree = "<group>"; };
 		335E9434211E395800F8A807 /* TerminalServiceRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalServiceRegistry.h; sourceTree = "<group>"; };
 		335E9435211E395800F8A807 /* TerminalServiceRegistry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalServiceRegistry.m; sourceTree = "<group>"; };
-		335E9437211E396100F8A807 /* TerminalService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalService.h; sourceTree = "<group>"; };
-		335E9438211E396100F8A807 /* TerminalService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalService.m; sourceTree = "<group>"; };
 		33AAD19720F37D36005E9F88 /* OpenInTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAD19A20F37D36005E9F88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33AAD19B20F37D36005E9F88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +60,10 @@
 		33AAD1A220F37D37005E9F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AAD1A320F37D37005E9F88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33AAD1A520F37D37005E9F88 /* OpenInTerminal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenInTerminal.entitlements; sourceTree = "<group>"; };
+		D5AF6270A3B671DA86AB3CF2 /* TerminalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerminalService.h; sourceTree = "<group>"; };
+		D5AF67CA20824F44CEF39C8B /* TerminalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerminalService.m; sourceTree = "<group>"; };
+		D5AF6AD3C8B7B585EB8D6C64 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D5AF6D9E6E25808D98B23C6C /* Settings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Settings.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,8 @@
 		3346B9C1211E4A3E00685BF8 /* OpenInTerminalExtension */ = {
 			isa = PBXGroup;
 			children = (
+				335E9434211E395800F8A807 /* TerminalServiceRegistry.h */,
+				335E9435211E395800F8A807 /* TerminalServiceRegistry.m */,
 				3346B9C2211E4A3E00685BF8 /* OpenInTerminalExtension.h */,
 				3346B9C3211E4A3E00685BF8 /* OpenInTerminalExtension.m */,
 				3346B9C5211E4A3E00685BF8 /* Info.plist */,
@@ -90,11 +97,23 @@
 			path = OpenInTerminalExtension;
 			sourceTree = "<group>";
 		};
+		3346B9CF211E4E0500685BF8 /* Shared Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D5AF6D9E6E25808D98B23C6C /* Settings.mm */,
+				D5AF6AD3C8B7B585EB8D6C64 /* Settings.h */,
+				D5AF6270A3B671DA86AB3CF2 /* TerminalService.h */,
+				D5AF67CA20824F44CEF39C8B /* TerminalService.m */,
+			);
+			path = "Shared Classes";
+			sourceTree = "<group>";
+		};
 		33AAD18E20F37D36005E9F88 = {
 			isa = PBXGroup;
 			children = (
 				33AAD19920F37D36005E9F88 /* OpenInTerminal */,
 				3346B9C1211E4A3E00685BF8 /* OpenInTerminalExtension */,
+				3346B9CF211E4E0500685BF8 /* Shared Classes */,
 				33AAD19820F37D36005E9F88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,10 +132,6 @@
 			children = (
 				33AAD19A20F37D36005E9F88 /* AppDelegate.h */,
 				33AAD19B20F37D36005E9F88 /* AppDelegate.m */,
-				335E9434211E395800F8A807 /* TerminalServiceRegistry.h */,
-				335E9435211E395800F8A807 /* TerminalServiceRegistry.m */,
-				335E9437211E396100F8A807 /* TerminalService.h */,
-				335E9438211E396100F8A807 /* TerminalService.m */,
 				33AAD19D20F37D37005E9F88 /* Assets.xcassets */,
 				33AAD19F20F37D37005E9F88 /* MainMenu.xib */,
 				33AAD1A220F37D37005E9F88 /* Info.plist */,
@@ -176,9 +191,19 @@
 				TargetAttributes = {
 					3346B9BF211E4A3E00685BF8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 					33AAD19620F37D36005E9F88 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -225,7 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3346B9D0211E57B400685BF8 /* Settings.mm in Sources */,
 				3346B9C4211E4A3E00685BF8 /* OpenInTerminalExtension.m in Sources */,
+				3346B9CE211E4DE800685BF8 /* TerminalServiceRegistry.m in Sources */,
+				D5AF6034C1AFBE8E787A7F1D /* TerminalService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,10 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3346B9D2211E588500685BF8 /* TerminalService.m in Sources */,
 				33AAD1A420F37D37005E9F88 /* main.m in Sources */,
-				335E9439211E396100F8A807 /* TerminalService.m in Sources */,
-				335E9436211E395800F8A807 /* TerminalServiceRegistry.m in Sources */,
 				33AAD19C20F37D36005E9F88 /* AppDelegate.m in Sources */,
+				D5AF64B4E2B45BFEE21410FF /* Settings.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +303,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terry1994.OpenInTerminal.OpenInTerminalExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.gitlab.terrylewis.OpenInTerminal.OpenInTerminalExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -294,7 +322,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terry1994.OpenInTerminal.OpenInTerminalExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.gitlab.terrylewis.OpenInTerminal.OpenInTerminalExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -422,7 +450,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terry1994.OpenInTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = io.gitlab.terrylewis.OpenInTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -440,7 +468,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.terry1994.OpenInTerminal;
+				PRODUCT_BUNDLE_IDENTIFIER = io.gitlab.terrylewis.OpenInTerminal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

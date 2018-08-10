@@ -7,6 +7,8 @@
 //
 
 #import "OpenInTerminalExtension.h"
+#import "TerminalService.h"
+#import "TerminalServiceRegistry.h"
 
 @interface OpenInTerminalExtension ()
 
@@ -45,7 +47,7 @@
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {
     if (whichMenu == FIMenuKindContextualMenuForContainer){
         NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
-        [menu addItemWithTitle:@"Open in Terminal..." action:@selector(sampleAction:) keyEquivalent:@""];
+        [menu addItemWithTitle:@"Open in Terminal" action:@selector(sampleAction:) keyEquivalent:@""];
         
         return menu;
     }
@@ -55,14 +57,9 @@
 
 - (void)sampleAction:(id)sender {
     NSURL* target = [[FIFinderSyncController defaultController] targetedURL];
-
     NSString *fullPath = target.path;
-
-    NSURLComponents *components = [NSURLComponents new];
-    [components setScheme:@"termforwarder"];
-    [components setHost:@"terminal"];
-    [components setPath:fullPath];
-    [NSWorkspace.sharedWorkspace openURL:components.URL];
+    
+    [TerminalServiceRegistry.sharedInstance executeServiceAtPath:fullPath];
 }
 
 @end

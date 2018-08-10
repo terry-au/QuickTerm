@@ -10,33 +10,35 @@
 
 #import "TerminalServiceRegistry.h"
 #import "TerminalService.h"
+#import "Settings.h"
 
 @implementation TerminalServiceRegistry
 
 + (instancetype)sharedInstance {
-    static TerminalServiceRegistry *sharedInstance = nil;
-    if (!sharedInstance) {
-        sharedInstance = [[self alloc] init];
-    }
+    static id _sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+      _sharedInstance = [[self alloc] init];
+    });
 
-    return sharedInstance;
+    return _sharedInstance;
 }
+
 - (instancetype)init {
     if (self = [super init]) {
-        self.services = NSMutableArray.array;
+        self.services = [Settings.sharedInstance defaultServices];
     }
     return self;
 }
 
-- (void)registerService:(TerminalService *)service {
-    [self registerService:service makeDefault:NO];
-}
-
-- (void)registerService:(TerminalService *)service makeDefault:(BOOL)makeDefault {
-    [self.services addObject:service];
-    if (makeDefault) {
-        self.service = service;
+- (TerminalService *)activeService {
+    for (TerminalService *terminalService in self.services) {
+        if ([terminalService.identifier isEqualToString:Settings.sharedInstance.activeServiceIdentifier]) {
+            return terminalService;
+        }
     }
+
+    return nil;
 }
 
 - (void)executeServiceAtPath:(NSString *)path {
@@ -49,11 +51,11 @@
     [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
     [pasteboard setString:path forType:NSStringPboardType];
 
-    NSString *serviceString = self.service.serviceName;
+    TerminalService *activeService = [self activeService];
 
-    BOOL success = NSPerformService(serviceString, pasteboard);
+    BOOL success = NSPerformService(activeService.serviceName, pasteboard);
     if (!success) {
-        NSLog(@"Failed to perform service: %@", self.service);
+        NSLog(@"Failed to perform service: %@", activeService);
     }
 }
 

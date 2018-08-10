@@ -13,11 +13,8 @@
 
 + (instancetype)sharedInstance;
 
-- (void)registerService:(TerminalService *)service;
 - (void)executeServiceAtPath:(NSString *)path;
-- (void)registerService:(TerminalService *)service makeDefault:(BOOL)makeDefault;
 
-@property(nonatomic, strong) NSMutableArray *services;
-@property(nonatomic, weak) TerminalService *service;
+@property(nonatomic, strong) NSArray<TerminalService *> *services;
 
 @end
