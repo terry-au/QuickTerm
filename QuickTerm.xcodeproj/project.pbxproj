@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3346B9C4211E4A3E00685BF8 /* OpenInTerminalExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3346B9C3211E4A3E00685BF8 /* OpenInTerminalExtension.m */; };
-		3346B9C9211E4A3E00685BF8 /* OpenInTerminalExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3346B9C0211E4A3E00685BF8 /* OpenInTerminalExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3346B9C4211E4A3E00685BF8 /* QuickTermExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3346B9C3211E4A3E00685BF8 /* QuickTermExtension.m */; };
+		3346B9C9211E4A3E00685BF8 /* QuickTermExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3346B9C0211E4A3E00685BF8 /* QuickTermExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3346B9CE211E4DE800685BF8 /* TerminalServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 335E9435211E395800F8A807 /* TerminalServiceRegistry.m */; };
 		3346B9D0211E57B400685BF8 /* Settings.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5AF6D9E6E25808D98B23C6C /* Settings.mm */; };
 		3346B9D2211E588500685BF8 /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF67CA20824F44CEF39C8B /* TerminalService.m */; };
@@ -37,7 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3346B9C9211E4A3E00685BF8 /* OpenInTerminalExtension.appex in Embed App Extensions */,
+				3346B9C9211E4A3E00685BF8 /* QuickTermExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,21 +45,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3346B9C0211E4A3E00685BF8 /* OpenInTerminalExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenInTerminalExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		3346B9C2211E4A3E00685BF8 /* OpenInTerminalExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenInTerminalExtension.h; sourceTree = "<group>"; };
-		3346B9C3211E4A3E00685BF8 /* OpenInTerminalExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenInTerminalExtension.m; sourceTree = "<group>"; };
+		3346B9C0211E4A3E00685BF8 /* QuickTermExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickTermExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3346B9C2211E4A3E00685BF8 /* QuickTermExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickTermExtension.h; sourceTree = "<group>"; };
+		3346B9C3211E4A3E00685BF8 /* QuickTermExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickTermExtension.m; sourceTree = "<group>"; };
 		3346B9C5211E4A3E00685BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3346B9C6211E4A3E00685BF8 /* OpenInTerminalExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenInTerminalExtension.entitlements; sourceTree = "<group>"; };
+		3346B9C6211E4A3E00685BF8 /* QuickTermExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickTermExtension.entitlements; sourceTree = "<group>"; };
 		335E9434211E395800F8A807 /* TerminalServiceRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalServiceRegistry.h; sourceTree = "<group>"; };
 		335E9435211E395800F8A807 /* TerminalServiceRegistry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalServiceRegistry.m; sourceTree = "<group>"; };
-		33AAD19720F37D36005E9F88 /* OpenInTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AAD19720F37D36005E9F88 /* QuickTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAD19A20F37D36005E9F88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33AAD19B20F37D36005E9F88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		33AAD19D20F37D37005E9F88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33AAD1A020F37D37005E9F88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		33AAD1A220F37D37005E9F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AAD1A320F37D37005E9F88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		33AAD1A520F37D37005E9F88 /* OpenInTerminal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenInTerminal.entitlements; sourceTree = "<group>"; };
+		33AAD1A520F37D37005E9F88 /* QuickTerm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickTerm.entitlements; sourceTree = "<group>"; };
 		D5AF6270A3B671DA86AB3CF2 /* TerminalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerminalService.h; sourceTree = "<group>"; };
 		D5AF67CA20824F44CEF39C8B /* TerminalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerminalService.m; sourceTree = "<group>"; };
 		D5AF6AD3C8B7B585EB8D6C64 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
@@ -84,17 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3346B9C1211E4A3E00685BF8 /* OpenInTerminalExtension */ = {
+		3346B9C1211E4A3E00685BF8 /* QuickTermExtension */ = {
 			isa = PBXGroup;
 			children = (
 				335E9434211E395800F8A807 /* TerminalServiceRegistry.h */,
 				335E9435211E395800F8A807 /* TerminalServiceRegistry.m */,
-				3346B9C2211E4A3E00685BF8 /* OpenInTerminalExtension.h */,
-				3346B9C3211E4A3E00685BF8 /* OpenInTerminalExtension.m */,
+				3346B9C2211E4A3E00685BF8 /* QuickTermExtension.h */,
+				3346B9C3211E4A3E00685BF8 /* QuickTermExtension.m */,
 				3346B9C5211E4A3E00685BF8 /* Info.plist */,
-				3346B9C6211E4A3E00685BF8 /* OpenInTerminalExtension.entitlements */,
+				3346B9C6211E4A3E00685BF8 /* QuickTermExtension.entitlements */,
 			);
-			path = OpenInTerminalExtension;
+			path = QuickTermExtension;
 			sourceTree = "<group>";
 		};
 		3346B9CF211E4E0500685BF8 /* Shared Classes */ = {
@@ -111,8 +111,8 @@
 		33AAD18E20F37D36005E9F88 = {
 			isa = PBXGroup;
 			children = (
-				33AAD19920F37D36005E9F88 /* OpenInTerminal */,
-				3346B9C1211E4A3E00685BF8 /* OpenInTerminalExtension */,
+				33AAD19920F37D36005E9F88 /* QuickTerm */,
+				3346B9C1211E4A3E00685BF8 /* QuickTermExtension */,
 				3346B9CF211E4E0500685BF8 /* Shared Classes */,
 				33AAD19820F37D36005E9F88 /* Products */,
 			);
@@ -121,13 +121,13 @@
 		33AAD19820F37D36005E9F88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33AAD19720F37D36005E9F88 /* OpenInTerminal.app */,
-				3346B9C0211E4A3E00685BF8 /* OpenInTerminalExtension.appex */,
+				33AAD19720F37D36005E9F88 /* QuickTerm.app */,
+				3346B9C0211E4A3E00685BF8 /* QuickTermExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33AAD19920F37D36005E9F88 /* OpenInTerminal */ = {
+		33AAD19920F37D36005E9F88 /* QuickTerm */ = {
 			isa = PBXGroup;
 			children = (
 				33AAD19A20F37D36005E9F88 /* AppDelegate.h */,
@@ -136,17 +136,17 @@
 				33AAD19F20F37D37005E9F88 /* MainMenu.xib */,
 				33AAD1A220F37D37005E9F88 /* Info.plist */,
 				33AAD1A320F37D37005E9F88 /* main.m */,
-				33AAD1A520F37D37005E9F88 /* OpenInTerminal.entitlements */,
+				33AAD1A520F37D37005E9F88 /* QuickTerm.entitlements */,
 			);
-			path = OpenInTerminal;
+			path = QuickTerm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3346B9BF211E4A3E00685BF8 /* OpenInTerminalExtension */ = {
+		3346B9BF211E4A3E00685BF8 /* QuickTermExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3346B9CA211E4A3E00685BF8 /* Build configuration list for PBXNativeTarget "OpenInTerminalExtension" */;
+			buildConfigurationList = 3346B9CA211E4A3E00685BF8 /* Build configuration list for PBXNativeTarget "QuickTermExtension" */;
 			buildPhases = (
 				3346B9BC211E4A3E00685BF8 /* Sources */,
 				3346B9BD211E4A3E00685BF8 /* Frameworks */,
@@ -156,14 +156,14 @@
 			);
 			dependencies = (
 			);
-			name = OpenInTerminalExtension;
+			name = QuickTermExtension;
 			productName = OpenInTerminalExtension;
-			productReference = 3346B9C0211E4A3E00685BF8 /* OpenInTerminalExtension.appex */;
+			productReference = 3346B9C0211E4A3E00685BF8 /* QuickTermExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		33AAD19620F37D36005E9F88 /* OpenInTerminal */ = {
+		33AAD19620F37D36005E9F88 /* QuickTerm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33AAD1A820F37D37005E9F88 /* Build configuration list for PBXNativeTarget "OpenInTerminal" */;
+			buildConfigurationList = 33AAD1A820F37D37005E9F88 /* Build configuration list for PBXNativeTarget "QuickTerm" */;
 			buildPhases = (
 				33AAD19320F37D36005E9F88 /* Sources */,
 				33AAD19420F37D36005E9F88 /* Frameworks */,
@@ -175,9 +175,9 @@
 			dependencies = (
 				3346B9C8211E4A3E00685BF8 /* PBXTargetDependency */,
 			);
-			name = OpenInTerminal;
+			name = QuickTerm;
 			productName = OpenInTerminal;
-			productReference = 33AAD19720F37D36005E9F88 /* OpenInTerminal.app */;
+			productReference = 33AAD19720F37D36005E9F88 /* QuickTerm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33AAD19220F37D36005E9F88 /* Build configuration list for PBXProject "OpenInTerminal" */;
+			buildConfigurationList = 33AAD19220F37D36005E9F88 /* Build configuration list for PBXProject "QuickTerm" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,8 +220,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33AAD19620F37D36005E9F88 /* OpenInTerminal */,
-				3346B9BF211E4A3E00685BF8 /* OpenInTerminalExtension */,
+				33AAD19620F37D36005E9F88 /* QuickTerm */,
+				3346B9BF211E4A3E00685BF8 /* QuickTermExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3346B9D0211E57B400685BF8 /* Settings.mm in Sources */,
-				3346B9C4211E4A3E00685BF8 /* OpenInTerminalExtension.m in Sources */,
+				3346B9C4211E4A3E00685BF8 /* QuickTermExtension.m in Sources */,
 				3346B9CE211E4DE800685BF8 /* TerminalServiceRegistry.m in Sources */,
 				D5AF6034C1AFBE8E787A7F1D /* TerminalService.m in Sources */,
 			);
@@ -273,7 +273,7 @@
 /* Begin PBXTargetDependency section */
 		3346B9C8211E4A3E00685BF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3346B9BF211E4A3E00685BF8 /* OpenInTerminalExtension */;
+			target = 3346B9BF211E4A3E00685BF8 /* QuickTermExtension */;
 			targetProxy = 3346B9C7211E4A3E00685BF8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -293,11 +293,11 @@
 		3346B9CB211E4A3E00685BF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = OpenInTerminalExtension/OpenInTerminalExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuickTermExtension/QuickTermExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVW2QXS9H2;
-				INFOPLIST_FILE = OpenInTerminalExtension/Info.plist;
+				INFOPLIST_FILE = QuickTermExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -312,11 +312,11 @@
 		3346B9CC211E4A3E00685BF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = OpenInTerminalExtension/OpenInTerminalExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuickTermExtension/QuickTermExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVW2QXS9H2;
-				INFOPLIST_FILE = OpenInTerminalExtension/Info.plist;
+				INFOPLIST_FILE = QuickTermExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -441,11 +441,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OpenInTerminal/OpenInTerminal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuickTerm/QuickTerm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVW2QXS9H2;
-				INFOPLIST_FILE = OpenInTerminal/Info.plist;
+				INFOPLIST_FILE = QuickTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -459,11 +459,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = OpenInTerminal/OpenInTerminal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = QuickTerm/QuickTerm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WVW2QXS9H2;
-				INFOPLIST_FILE = OpenInTerminal/Info.plist;
+				INFOPLIST_FILE = QuickTerm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -476,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3346B9CA211E4A3E00685BF8 /* Build configuration list for PBXNativeTarget "OpenInTerminalExtension" */ = {
+		3346B9CA211E4A3E00685BF8 /* Build configuration list for PBXNativeTarget "QuickTermExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3346B9CB211E4A3E00685BF8 /* Debug */,
@@ -485,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33AAD19220F37D36005E9F88 /* Build configuration list for PBXProject "OpenInTerminal" */ = {
+		33AAD19220F37D36005E9F88 /* Build configuration list for PBXProject "QuickTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33AAD1A620F37D37005E9F88 /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33AAD1A820F37D37005E9F88 /* Build configuration list for PBXNativeTarget "OpenInTerminal" */ = {
+		33AAD1A820F37D37005E9F88 /* Build configuration list for PBXNativeTarget "QuickTerm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33AAD1A920F37D37005E9F88 /* Debug */,

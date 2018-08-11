@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface TerminalService : NSObject
-- (instancetype)initWithDisplayName:(NSString *)displayName serviceName:(NSString *)serviceName identifier:(NSString *)identifier;
-+ (instancetype)serviceWithDisplayName:(NSString *)displayName serviceName:(NSString *)serviceName identifier:(NSString *)identifier;
+- (NSString *)description;
+- (instancetype)initWithApplicationName:(NSString *)applicationName serviceDescription:(NSString *)serviceDescription serviceName:(NSString *)serviceName identifier:(NSString *)identifier;
++ (instancetype)serviceWithApplicationName:(NSString *)applicationName serviceDescription:(NSString *)serviceDescription serviceName:(NSString *)serviceName identifier:(NSString *)identifier;
 
-@property(nonatomic, strong) NSString *displayName;
+@property(nonatomic, strong) NSString *applicationName;
+@property(nonatomic, strong) NSString *serviceDescription;
 @property(nonatomic, strong) NSString *serviceName;
 @property(nonatomic, strong) NSString *identifier;
-
-- (NSString *)description;
 
 @end

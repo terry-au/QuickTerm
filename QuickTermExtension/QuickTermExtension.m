@@ -1,22 +1,21 @@
 //
 //  FinderSync.m
-//  OpenInTerminalExtension
+//  QuickTermExtension
 //
 //  Created by Terry Lewis on 9/7/18.
 //  Copyright © 2018 Terry Lewis. All rights reserved.
 //
 
-#import "OpenInTerminalExtension.h"
-#import "TerminalService.h"
+#import "QuickTermExtension.h"
 #import "TerminalServiceRegistry.h"
 
-@interface OpenInTerminalExtension ()
+@interface QuickTermExtension ()
 
 @property NSURL *myFolderURL;
 
 @end
 
-@implementation OpenInTerminalExtension
+@implementation QuickTermExtension
 
 - (instancetype)init {
     self = [super init];
@@ -33,11 +32,11 @@
 #pragma mark - Menu and toolbar item support
 
 - (NSString *)toolbarItemName {
-    return @"OpenInTerminalExtension";
+    return @"QuickTerm";
 }
 
 - (NSString *)toolbarItemToolTip {
-    return @"OpenInTerminalExtension: Click the toolbar item for a menu.";
+    return @"QuickTermExtension: Click the toolbar item for a menu.";
 }
 
 - (NSImage *)toolbarItemImage {
@@ -45,12 +44,12 @@
 }
 
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {
-    if (whichMenu == FIMenuKindContextualMenuForContainer){
+//    if (whichMenu == FIMenuKindContextualMenuForContainer){
         NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
         [menu addItemWithTitle:@"Open in Terminal" action:@selector(sampleAction:) keyEquivalent:@""];
         
         return menu;
-    }
+//    }
     
     return nil;
 }

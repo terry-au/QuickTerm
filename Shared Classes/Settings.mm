@@ -44,13 +44,25 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 - (NSArray<TerminalService *> *)defaultServices {
     if (!_defaultServices) {
         _defaultServices = @[
-            [TerminalService serviceWithDisplayName:@"Terminal: New Tab"
-                                        serviceName:@"New Terminal Tab at Folder"
-                                         identifier:kDefaultDefaultServiceIdentifier],
+            [TerminalService serviceWithApplicationName:@"Terminal"
+                                     serviceDescription:@"New Tab"
+                                            serviceName:@"New Terminal Tab at Folder"
+                                             identifier:kDefaultDefaultServiceIdentifier],
 
-            [TerminalService serviceWithDisplayName:@"Terminal: New Tab"
-                                        serviceName:@"New Terminal Tab at Folder"
-                                         identifier:@"com.apple.terminal.window"],
+            [TerminalService serviceWithApplicationName:@"Terminal"
+                                     serviceDescription:@"New Window"
+                                            serviceName:@"New Terminal at Folder"
+                                             identifier:@"com.apple.terminal.window"],
+
+            [TerminalService serviceWithApplicationName:@"iTerm2"
+                                     serviceDescription:@"New Window"
+                                            serviceName:@"New iTerm2 Tab Here"
+                                             identifier:@"com.googlecode.iterm2.tab"],
+
+            [TerminalService serviceWithApplicationName:@"iTerm2"
+                                     serviceDescription:@"New Window"
+                                            serviceName:@"New iTerm2 Window Here"
+                                             identifier:@"com.googlecode.iterm2.window"],
         ];
     }
     return _defaultServices;

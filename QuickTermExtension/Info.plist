@@ -31,7 +31,7 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.FinderSync</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>OpenInTerminalExtension</string>
+		<string>QuickTermExtension</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Terry Lewis. All rights reserved.</string>
