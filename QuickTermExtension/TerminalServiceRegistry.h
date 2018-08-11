@@ -13,6 +13,7 @@
 
 + (instancetype)sharedInstance;
 
+- (void)executeServiceNamed:(NSString *)serviceName atPath:(NSString *)path;
 - (void)executeServiceAtPath:(NSString *)path;
 
 @property(nonatomic, strong) NSArray<TerminalService *> *services;

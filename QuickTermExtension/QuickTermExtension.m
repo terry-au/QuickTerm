@@ -8,12 +8,7 @@
 
 #import "QuickTermExtension.h"
 #import "TerminalServiceRegistry.h"
-
-@interface QuickTermExtension ()
-
-@property NSURL *myFolderURL;
-
-@end
+#import "TerminalService.h"
 
 @implementation QuickTermExtension
 
@@ -23,8 +18,7 @@
     NSLog(@"%s launched from %@ ; compiled at %s", __PRETTY_FUNCTION__, [[NSBundle mainBundle] bundlePath], __TIME__);
 
     // Set up the directory we are syncing.
-    self.myFolderURL = [NSURL fileURLWithPath:@"/"];
-    [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:self.myFolderURL];
+    [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:@"/"];
 
     return self;
 }
@@ -44,21 +38,39 @@
 }
 
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {
-//    if (whichMenu == FIMenuKindContextualMenuForContainer){
-        NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
-        [menu addItemWithTitle:@"Open in Terminal" action:@selector(sampleAction:) keyEquivalent:@""];
-        
-        return menu;
-//    }
-    
-    return nil;
+    NSMenu *menu = [[NSMenu alloc] initWithTitle:@""];
+
+    switch (whichMenu) {
+        case FIMenuKindContextualMenuForItems:
+            break;
+        case FIMenuKindContextualMenuForContainer:
+        case FIMenuKindContextualMenuForSidebar:
+            [menu addItemWithTitle:@"Open in Terminal" action:@selector(openDirectoryInDefaultTerminal:) keyEquivalent:@""];
+            break;
+        case FIMenuKindToolbarItemMenu:
+            for (TerminalService *service in TerminalServiceRegistry.sharedInstance.services) {
+                [menu addItemWithTitle:service.serviceName
+                                action:@selector(openDirectoryInTerminal:)
+                         keyEquivalent:@""];
+            }
+            break;
+    }
+
+    return menu;
 }
 
-- (void)sampleAction:(id)sender {
-    NSURL* target = [[FIFinderSyncController defaultController] targetedURL];
+- (void)openDirectoryInDefaultTerminal:(id)sender {
+    NSURL *target = [[FIFinderSyncController defaultController] targetedURL];
     NSString *fullPath = target.path;
-    
+
     [TerminalServiceRegistry.sharedInstance executeServiceAtPath:fullPath];
+}
+
+- (void)openDirectoryInTerminal:(NSMenuItem *)sender {
+    NSURL *target = [[FIFinderSyncController defaultController] targetedURL];
+    NSString *fullPath = target.path;
+
+    [TerminalServiceRegistry.sharedInstance executeServiceNamed:sender.title atPath:fullPath];
 }
 
 @end

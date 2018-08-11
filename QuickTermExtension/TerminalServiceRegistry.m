@@ -23,7 +23,6 @@
 
     return _sharedInstance;
 }
-
 - (instancetype)init {
     if (self = [super init]) {
         self.services = [Settings.sharedInstance defaultServices];
@@ -41,7 +40,7 @@
     return nil;
 }
 
-- (void)executeServiceAtPath:(NSString *)path {
+- (void)executeServiceNamed:(NSString *)serviceName atPath:(NSString *)path {
     BOOL isDirectory = NO;
     if (![NSFileManager.defaultManager fileExistsAtPath:path isDirectory:&isDirectory] || !isDirectory) {
         return;
@@ -51,12 +50,15 @@
     [pasteboard declareTypes:@[NSStringPboardType] owner:nil];
     [pasteboard setString:path forType:NSStringPboardType];
 
-    TerminalService *activeService = [self activeService];
-
-    BOOL success = NSPerformService(activeService.serviceName, pasteboard);
+    BOOL success = NSPerformService(serviceName, pasteboard);
     if (!success) {
-        NSLog(@"Failed to perform service: %@", activeService);
+        NSLog(@"Failed to perform service: %@", serviceName);
     }
+}
+
+- (void)executeServiceAtPath:(NSString *)path {
+    TerminalService *activeService = [self activeService];
+    [self executeServiceNamed:activeService.serviceName atPath:path];
 }
 
 @end
