@@ -18,7 +18,7 @@
     NSLog(@"%s launched from %@ ; compiled at %s", __PRETTY_FUNCTION__, [[NSBundle mainBundle] bundlePath], __TIME__);
 
     // Set up the directory we are syncing.
-    [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:@"/"];
+    [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:[NSURL fileURLWithPath:@"/"]];
 
     return self;
 }
@@ -34,7 +34,7 @@
 }
 
 - (NSImage *)toolbarItemImage {
-    return [NSImage imageNamed:NSImageNameCaution];
+    return [NSImage imageNamed:@"Console-Icon"];
 }
 
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {

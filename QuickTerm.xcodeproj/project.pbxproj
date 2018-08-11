@@ -12,6 +12,7 @@
 		3346B9CE211E4DE800685BF8 /* TerminalServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 335E9435211E395800F8A807 /* TerminalServiceRegistry.m */; };
 		3346B9D0211E57B400685BF8 /* Settings.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5AF6D9E6E25808D98B23C6C /* Settings.mm */; };
 		3346B9D2211E588500685BF8 /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF67CA20824F44CEF39C8B /* TerminalService.m */; };
+		336B7D74211E6D02008BE50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3346BA06211E6C0A00685BF8 /* Assets.xcassets */; };
 		33AAD19C20F37D36005E9F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAD19B20F37D36005E9F88 /* AppDelegate.m */; };
 		33AAD19E20F37D37005E9F88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AAD19D20F37D37005E9F88 /* Assets.xcassets */; };
 		33AAD1A120F37D37005E9F88 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AAD19F20F37D37005E9F88 /* MainMenu.xib */; };
@@ -50,6 +51,7 @@
 		3346B9C3211E4A3E00685BF8 /* QuickTermExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickTermExtension.m; sourceTree = "<group>"; };
 		3346B9C5211E4A3E00685BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3346B9C6211E4A3E00685BF8 /* QuickTermExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickTermExtension.entitlements; sourceTree = "<group>"; };
+		3346BA06211E6C0A00685BF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		335E9434211E395800F8A807 /* TerminalServiceRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalServiceRegistry.h; sourceTree = "<group>"; };
 		335E9435211E395800F8A807 /* TerminalServiceRegistry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalServiceRegistry.m; sourceTree = "<group>"; };
 		33AAD19720F37D36005E9F88 /* QuickTerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				3346B9C2211E4A3E00685BF8 /* QuickTermExtension.h */,
 				3346B9C3211E4A3E00685BF8 /* QuickTermExtension.m */,
 				3346B9C5211E4A3E00685BF8 /* Info.plist */,
+				3346BA06211E6C0A00685BF8 /* Assets.xcassets */,
 				3346B9C6211E4A3E00685BF8 /* QuickTermExtension.entitlements */,
 			);
 			path = QuickTermExtension;
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336B7D74211E6D02008BE50C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
