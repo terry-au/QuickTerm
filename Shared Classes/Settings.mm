@@ -95,7 +95,6 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 
 - (void)setEnableContextMenu:(BOOL)enableContextMenu {
     [_defaults setBool:enableContextMenu forKey:kKeyEnableContextMenuIdentifier];
-    NSLog(@"%@", enableContextMenu ? @"ENABLED" : @"DISABLED");
 }
 
 @end

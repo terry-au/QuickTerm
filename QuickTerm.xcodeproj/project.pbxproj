@@ -106,8 +106,8 @@
 		3346B9CF211E4E0500685BF8 /* Shared Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D5AF6D9E6E25808D98B23C6C /* Settings.mm */,
 				D5AF6AD3C8B7B585EB8D6C64 /* Settings.h */,
+				D5AF6D9E6E25808D98B23C6C /* Settings.mm */,
 				D5AF6270A3B671DA86AB3CF2 /* TerminalService.h */,
 				D5AF67CA20824F44CEF39C8B /* TerminalService.m */,
 			);
