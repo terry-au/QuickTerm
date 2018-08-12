@@ -11,12 +11,12 @@ Previous utilities I used were rendered obsolete with advent of System Integrity
 Additionally, using the services context menu seems unnatural, as it only seems to work
 for selected files – i.e. not the currently open directory.
 
-## Compatibility:
+## Compatibility
 Should be compatible with macOS 10.10+, tested on 10.13.6.
 
 Only supports Terminal and iTerm2.
 
-## Bugs:
+## Bugs
 Please note: iTerm2 creates an additional window when one of its services is called, if no
 iTerm2 was not previously running. I did consider fixing this issue by means of calling iTerm2 
 via an AppleScript, however, I believe the root cause of the issue should be fixed. As I do 
