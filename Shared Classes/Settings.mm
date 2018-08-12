@@ -11,6 +11,7 @@
 }
 
 static NSString *kKeyDefaultServiceIdentifier = @"DefaultServiceIdentifier";
+static NSString *kKeyEnableContextMenuIdentifier = @"EnableContextMenu";
 static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 
 + (instancetype)sharedInstance {
@@ -26,7 +27,7 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _defaults = [[NSUserDefaults alloc] initWithSuiteName:@"io.gitlab.terrylewis.OpenInTerminal"];
+        _defaults = [[NSUserDefaults alloc] initWithSuiteName:@"io.gitlab.terrylewis.OpenInTerminal.group"];
     }
 
     return self;
@@ -41,31 +42,41 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
     return value;
 }
 
+- (BOOL)_appWithBundleIdentifierInstalled:(NSString *)bundleIdentifier {
+    CFErrorRef error = NULL;
+    NSArray *result = (__bridge_transfer NSArray *)LSCopyApplicationURLsForBundleIdentifier ((__bridge CFStringRef)bundleIdentifier, &error );
+    return error == nil && result.count > 0;
+}
+
 - (NSArray<TerminalService *> *)defaultServices {
-    if (!_defaultServices) {
-        _defaultServices = @[
-            [TerminalService serviceWithApplicationName:@"Terminal"
-                                     serviceDescription:@"Open Terminal Tab"
-                                            serviceName:@"New Terminal Tab at Folder"
-                                             identifier:kDefaultDefaultServiceIdentifier],
+    NSMutableArray<TerminalService *> *mutableTerminalServices = @[
+        [TerminalService serviceWithApplicationName:@"Terminal"
+                                 serviceDescription:@"Open Terminal Tab"
+                                        serviceName:@"New Terminal Tab at Folder"
+                                         identifier:kDefaultDefaultServiceIdentifier],
 
-            [TerminalService serviceWithApplicationName:@"Terminal"
-                                     serviceDescription:@"Open Terminal Window"
-                                            serviceName:@"New Terminal at Folder"
-                                             identifier:@"com.apple.terminal.window"],
-
-            [TerminalService serviceWithApplicationName:@"iTerm2"
-                                     serviceDescription:@"Open iTerm Tab"
-                                            serviceName:@"New iTerm2 Tab Here"
-                                             identifier:@"com.googlecode.iterm2.tab"],
-
-            [TerminalService serviceWithApplicationName:@"iTerm2"
-                                     serviceDescription:@"Open iTerm Window"
-                                            serviceName:@"New iTerm2 Window Here"
-                                             identifier:@"com.googlecode.iterm2.window"],
-        ];
+        [TerminalService serviceWithApplicationName:@"Terminal"
+                                 serviceDescription:@"Open Terminal Window"
+                                        serviceName:@"New Terminal at Folder"
+                                         identifier:@"com.apple.terminal.window"],
+    ].mutableCopy;
+    
+    if ([self _appWithBundleIdentifierInstalled:@"com.googlecode.iterm2"]) {
+        [mutableTerminalServices addObjectsFromArray:
+         @[
+           [TerminalService serviceWithApplicationName:@"iTerm2"
+                                    serviceDescription:@"Open iTerm Tab"
+                                           serviceName:@"New iTerm2 Tab Here"
+                                            identifier:@"com.googlecode.iterm2.tab"],
+           
+           [TerminalService serviceWithApplicationName:@"iTerm2"
+                                    serviceDescription:@"Open iTerm Window"
+                                           serviceName:@"New iTerm2 Window Here"
+                                            identifier:@"com.googlecode.iterm2.window"],
+           ]];
     }
-    return _defaultServices;
+    
+    return mutableTerminalServices;
 }
 
 - (NSString *)activeServiceIdentifier {
@@ -76,6 +87,15 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 
 - (void)setActiveServiceIdentifier:(NSString *)activeServiceIdentifier {
     [_defaults setObject:activeServiceIdentifier forKey:kKeyDefaultServiceIdentifier];
+}
+
+- (BOOL)enableContextMenu {
+    return ((NSNumber *)[self valueForSetting:kKeyEnableContextMenuIdentifier withDefault:@(YES)]).boolValue;
+}
+
+- (void)setEnableContextMenu:(BOOL)enableContextMenu {
+    [_defaults setBool:enableContextMenu forKey:kKeyEnableContextMenuIdentifier];
+    NSLog(@"%@", enableContextMenu ? @"ENABLED" : @"DISABLED");
 }
 
 @end

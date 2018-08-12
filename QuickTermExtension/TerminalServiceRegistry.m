@@ -23,11 +23,9 @@
 
     return _sharedInstance;
 }
-- (instancetype)init {
-    if (self = [super init]) {
-        self.services = [Settings.sharedInstance defaultServices];
-    }
-    return self;
+
+- (NSArray *)services {
+    return [Settings.sharedInstance defaultServices];
 }
 
 - (TerminalService *)activeService {

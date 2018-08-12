@@ -9,6 +9,7 @@
 #import "QuickTermExtension.h"
 #import "TerminalServiceRegistry.h"
 #import "TerminalService.h"
+#import "Settings.h"
 
 @implementation QuickTermExtension
 
@@ -26,11 +27,11 @@
 #pragma mark - Menu and toolbar item support
 
 - (NSString *)toolbarItemName {
-    return @"QuickTerm";
+    return @"Terminal";
 }
 
 - (NSString *)toolbarItemToolTip {
-    return @"QuickTermExtension: Click the toolbar item for a menu.";
+    return @"Open a terminal session here.";
 }
 
 - (NSImage *)toolbarItemImage {
@@ -45,6 +46,7 @@
             break;
         case FIMenuKindContextualMenuForContainer:
         case FIMenuKindContextualMenuForSidebar:
+            if (!Settings.sharedInstance.enableContextMenu) { return nil; }
             [menu addItemWithTitle:@"Open in Terminal" action:@selector(openDirectoryInDefaultTerminal:) keyEquivalent:@""];
             break;
         case FIMenuKindToolbarItemMenu:

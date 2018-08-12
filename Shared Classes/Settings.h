@@ -12,6 +12,8 @@
 
 @property(nonatomic, strong) NSString *activeServiceIdentifier;
 
-@property(nonatomic, strong) NSArray<TerminalService *> *defaultServices;
+@property(nonatomic, assign) BOOL enableContextMenu;
+
+@property(nonatomic, strong, readonly) NSArray<TerminalService *> *defaultServices;
 
 @end

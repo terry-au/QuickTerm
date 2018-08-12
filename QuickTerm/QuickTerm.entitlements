@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>io.gitlab.terrylewis.OpenInTerminal</string>
+		<string>io.gitlab.terrylewis.OpenInTerminal.group</string>
 	</array>
 	<key>com.apple.security.files.user-selected.read-only</key>
 	<true/>
