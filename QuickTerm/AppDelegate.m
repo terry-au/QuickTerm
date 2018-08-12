@@ -10,7 +10,6 @@
 
 @interface AppDelegate ()
 
-@property(weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
@@ -20,6 +19,10 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
   // Insert code here to tear down your application
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
 }
 
 @end

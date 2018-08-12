@@ -31,6 +31,8 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
     self.tableView.action = @selector(tableViewRowClicked:);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    [self setTableViewEnabled:(self.checkBoxContextMenu.state == NSOnState)];;
 }
 
 - (void)viewDidAppear {
@@ -48,8 +50,15 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
     }
 }
 
+- (void)setTableViewEnabled:(BOOL)enabled {
+    self.tableView.enabled = enabled;
+    self.tableView.alphaValue = enabled ? 1.0 : 0.5;
+}
+
 - (void)checkBoxContextMenuClicked:(NSButton *)sender {
-    Settings.sharedInstance.enableContextMenu = (sender.state == NSOnState);
+    BOOL enabled = (sender.state == NSOnState);
+    Settings.sharedInstance.enableContextMenu = enabled;
+    [self setTableViewEnabled:enabled];
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
