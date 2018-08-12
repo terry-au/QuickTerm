@@ -24,6 +24,8 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    BOOL contextMenuEnabled = Settings.sharedInstance.enableContextMenu;
+    self.checkBoxContextMenu.state = contextMenuEnabled ? NSOnState : NSOffState;
     self.checkBoxContextMenu.target = self;
     self.checkBoxContextMenu.action = @selector(checkBoxContextMenuClicked:);
 
@@ -31,8 +33,8 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
     self.tableView.action = @selector(tableViewRowClicked:);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    [self setTableViewEnabled:contextMenuEnabled];;
 
-    [self setTableViewEnabled:(self.checkBoxContextMenu.state == NSOnState)];;
 }
 
 - (void)viewDidAppear {
