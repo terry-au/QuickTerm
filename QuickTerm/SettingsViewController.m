@@ -23,24 +23,24 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.checkBoxContextMenu.target = self;
     self.checkBoxContextMenu.action = @selector(checkBoxContextMenuClicked:);
-    
+
     self.tableView.target = self;
     self.tableView.action = @selector(tableViewRowClicked:);
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
+
     [self setTableViewEnabled:(self.checkBoxContextMenu.state == NSOnState)];;
 }
 
 - (void)viewDidAppear {
     [super viewDidAppear];
-    
+
     _services = [Settings.sharedInstance.defaultServices copy];
     [self.tableView reloadData];
-    
+
     for (NSUInteger i = 0; i < _services.count; ++i) {
         TerminalService *service = _services[i];
         if ([service.identifier isEqualToString:Settings.sharedInstance.activeServiceIdentifier]) {
@@ -69,7 +69,7 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
     TerminalService *terminalService = _services[row];
     NSString *cellIdentifier = nil;
     NSString *displayString = nil;
-    
+
     if (tableColumn == tableView.tableColumns[0]) {
         cellIdentifier = kIdentifierApplicationName;
         displayString = terminalService.applicationName;
@@ -77,15 +77,15 @@ static NSString *const kIdentifierServiceName = @"ServiceCellID";
         cellIdentifier = kIdentifierServiceName;
         displayString = terminalService.serviceName;
     }
-    
+
     NSTableCellView *cell = [tableView makeViewWithIdentifier:cellIdentifier owner:nil];
     cell.textField.stringValue = displayString;
-    
+
     return cell;
 }
 
 - (void)tableViewRowClicked:(NSTabView *)tableView {
-    NSInteger selectedRow = self.tableView.selectedRow;
+    NSUInteger selectedRow = self.tableView.selectedRow;
     TerminalService *terminalService = _services[selectedRow];
     Settings.sharedInstance.activeServiceIdentifier = terminalService.identifier;
 

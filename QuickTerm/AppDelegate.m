@@ -18,7 +18,7 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-  // Insert code here to tear down your application
+    // Insert code here to tear down your application
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

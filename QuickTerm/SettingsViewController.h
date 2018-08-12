@@ -10,7 +10,7 @@
 
 @interface SettingsViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 
-@property (weak) IBOutlet NSButton *checkBoxContextMenu;
-@property (weak) IBOutlet NSTableView *tableView;
+@property(weak) IBOutlet NSButton *checkBoxContextMenu;
+@property(weak) IBOutlet NSTableView *tableView;
 
 @end

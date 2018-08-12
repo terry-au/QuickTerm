@@ -44,7 +44,9 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 
 - (BOOL)_appWithBundleIdentifierInstalled:(NSString *)bundleIdentifier {
     CFErrorRef error = NULL;
-    NSArray *result = (__bridge_transfer NSArray *)LSCopyApplicationURLsForBundleIdentifier ((__bridge CFStringRef)bundleIdentifier, &error );
+    NSArray *result =
+        (__bridge_transfer NSArray *) LSCopyApplicationURLsForBundleIdentifier((__bridge CFStringRef) bundleIdentifier,
+                                                                               &error);
     return error == nil && result.count > 0;
 }
 
@@ -60,22 +62,22 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
                                         serviceName:@"New Terminal at Folder"
                                          identifier:@"com.apple.terminal.window"],
     ].mutableCopy;
-    
+
     if ([self _appWithBundleIdentifierInstalled:@"com.googlecode.iterm2"]) {
         [mutableTerminalServices addObjectsFromArray:
-         @[
-           [TerminalService serviceWithApplicationName:@"iTerm2"
-                                    serviceDescription:@"Open iTerm Tab"
-                                           serviceName:@"New iTerm2 Tab Here"
-                                            identifier:@"com.googlecode.iterm2.tab"],
-           
-           [TerminalService serviceWithApplicationName:@"iTerm2"
-                                    serviceDescription:@"Open iTerm Window"
-                                           serviceName:@"New iTerm2 Window Here"
-                                            identifier:@"com.googlecode.iterm2.window"],
-           ]];
+            @[
+                [TerminalService serviceWithApplicationName:@"iTerm2"
+                                         serviceDescription:@"Open iTerm Tab"
+                                                serviceName:@"New iTerm2 Tab Here"
+                                                 identifier:@"com.googlecode.iterm2.tab"],
+
+                [TerminalService serviceWithApplicationName:@"iTerm2"
+                                         serviceDescription:@"Open iTerm Window"
+                                                serviceName:@"New iTerm2 Window Here"
+                                                 identifier:@"com.googlecode.iterm2.window"],
+            ]];
     }
-    
+
     return mutableTerminalServices;
 }
 
@@ -90,7 +92,7 @@ static NSString *kDefaultDefaultServiceIdentifier = @"com.apple.terminal.tab";
 }
 
 - (BOOL)enableContextMenu {
-    return ((NSNumber *)[self valueForSetting:kKeyEnableContextMenuIdentifier withDefault:@(YES)]).boolValue;
+    return ((NSNumber *) [self valueForSetting:kKeyEnableContextMenuIdentifier withDefault:@(YES)]).boolValue;
 }
 
 - (void)setEnableContextMenu:(BOOL)enableContextMenu {

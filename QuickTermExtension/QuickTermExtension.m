@@ -46,7 +46,9 @@
             break;
         case FIMenuKindContextualMenuForContainer:
         case FIMenuKindContextualMenuForSidebar:
-            if (!Settings.sharedInstance.enableContextMenu) { return nil; }
+            if (!Settings.sharedInstance.enableContextMenu) {
+                return nil;
+            }
             [menu addItemWithTitle:@"Open in Terminal" action:@selector(openDirectoryInDefaultTerminal:) keyEquivalent:@""];
             break;
         case FIMenuKindToolbarItemMenu:
