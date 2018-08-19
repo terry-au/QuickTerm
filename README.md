@@ -17,7 +17,7 @@ Should be compatible with macOS 10.10+, tested on 10.13.6.
 Only supports Terminal and iTerm2.
 
 ## Bugs
-Please note: iTerm2 creates an additional window when one of its services is called, if no
-iTerm2 was not previously running. I did consider fixing this issue by means of calling iTerm2 
-via an AppleScript, however, I believe the root cause of the issue should be fixed. As I do 
-not actually use iTerm2, I have no plans to address this issue.
+Please note: iTerm2 creates an additional window when one of its services is called, if iTerm2
+was not previously running. I did consider fixing this issue by means of calling iTerm2 via an
+AppleScript, however, I believe the root cause of the issue should be fixed. As I do not 
+actually use iTerm2, I have no plans to personally address this issue.
