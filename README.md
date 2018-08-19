@@ -11,6 +11,18 @@ Previous utilities I used were rendered obsolete with advent of System Integrity
 Additionally, using the services context menu seems unnatural, as it only seems to work
 for selected files – i.e. not the currently open directory.
 
+## Screenshots
+
+### Settings
+![Settings](./Images/Settings.png)
+
+### Context menu
+![Context menu](./Images/ContextMenu.png)
+
+### Toolbar menu
+![Toolbar menu](./Images/ToolbarMenu.png)
+
+
 ## Compatibility
 Should be compatible with macOS 10.10+, tested on 10.13.6.
 
