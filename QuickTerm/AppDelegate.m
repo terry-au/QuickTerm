@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Third Party/PFMoveApplication.h"
 
 @interface AppDelegate ()
 
@@ -14,7 +15,12 @@
 
 @implementation AppDelegate
 
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+    PFMoveToApplicationsFolderIfNecessary();
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

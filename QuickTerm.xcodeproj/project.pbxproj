@@ -13,6 +13,7 @@
 		3346B9D0211E57B400685BF8 /* Settings.mm in Sources */ = {isa = PBXBuildFile; fileRef = D5AF6D9E6E25808D98B23C6C /* Settings.mm */; };
 		3346B9D2211E588500685BF8 /* TerminalService.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF67CA20824F44CEF39C8B /* TerminalService.m */; };
 		336B7D74211E6D02008BE50C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3346BA06211E6C0A00685BF8 /* Assets.xcassets */; };
+		336BD3FE225C652E0000C361 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 336BD3FC225C652E0000C361 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		336D0368211FE26D003862A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 336D0367211FE26D003862A7 /* Main.storyboard */; };
 		336D036B211FE2DE003862A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336D036A211FE2DE003862A7 /* SettingsViewController.m */; };
 		33AAD19C20F37D36005E9F88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAD19B20F37D36005E9F88 /* AppDelegate.m */; };
@@ -55,6 +56,8 @@
 		3346BA06211E6C0A00685BF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		335E9434211E395800F8A807 /* TerminalServiceRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TerminalServiceRegistry.h; sourceTree = "<group>"; };
 		335E9435211E395800F8A807 /* TerminalServiceRegistry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TerminalServiceRegistry.m; sourceTree = "<group>"; };
+		336BD3FC225C652E0000C361 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
+		336BD3FD225C652E0000C361 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
 		336D0367211FE26D003862A7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		336D0369211FE2DE003862A7 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		336D036A211FE2DE003862A7 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -114,6 +117,15 @@
 			path = "Shared Classes";
 			sourceTree = "<group>";
 		};
+		336BD3FB225C650D0000C361 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				336BD3FD225C652E0000C361 /* PFMoveApplication.h */,
+				336BD3FC225C652E0000C361 /* PFMoveApplication.m */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
 		33AAD18E20F37D36005E9F88 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 				33AAD19D20F37D37005E9F88 /* Assets.xcassets */,
 				336D0367211FE26D003862A7 /* Main.storyboard */,
 				336D0369211FE2DE003862A7 /* SettingsViewController.h */,
+				336BD3FB225C650D0000C361 /* Third Party */,
 				336D036A211FE2DE003862A7 /* SettingsViewController.m */,
 				33AAD1A220F37D37005E9F88 /* Info.plist */,
 				33AAD1A320F37D37005E9F88 /* main.m */,
@@ -211,6 +224,9 @@
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
 							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
 						};
 					};
 				};
@@ -275,6 +291,7 @@
 				336D036B211FE2DE003862A7 /* SettingsViewController.m in Sources */,
 				33AAD19C20F37D36005E9F88 /* AppDelegate.m in Sources */,
 				D5AF64B4E2B45BFEE21410FF /* Settings.mm in Sources */,
+				336BD3FE225C652E0000C361 /* PFMoveApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

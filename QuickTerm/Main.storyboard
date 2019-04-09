@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RXu-r0-QSh">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RXu-r0-QSh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -9,11 +10,12 @@
         <scene sceneID="xuk-b6-5Bv">
             <objects>
                 <windowController id="RXu-r0-QSh" sceneMemberID="viewController">
-                    <window key="window" title="QuickTerm" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="lW3-ol-sfq">
+                    <window key="window" title="QuickTerm" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="lW3-ol-sfq">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="RXu-r0-QSh" id="q91-Q2-Wot"/>
                         </connections>
@@ -34,27 +36,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q2b-bp-JZO">
-                                <rect key="frame" x="18" y="234" width="107" height="18"/>
-                                <buttonCell key="cell" type="check" title="Show in menu" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cte-zj-2qv">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo5-4p-X8C">
-                                <rect key="frame" x="20" y="20" width="440" height="208"/>
+                                <rect key="frame" x="20" y="20" width="440" height="201"/>
                                 <clipView key="contentView" id="85y-Pv-QiO">
-                                    <rect key="frame" x="1" y="0.0" width="438" height="207"/>
+                                    <rect key="frame" x="1" y="0.0" width="438" height="200"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="qRY-v6-hEK" viewBased="YES" id="ayE-XS-Mp7">
-                                            <rect key="frame" x="0.0" y="0.0" width="438" height="184"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="" width="116" minWidth="40" maxWidth="1000" id="hlf-yw-De4">
+                                                <tableColumn width="116" minWidth="40" maxWidth="1000" id="hlf-yw-De4">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Application">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -87,7 +82,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="316" minWidth="40" maxWidth="1000" id="kRU-Vg-7xU">
+                                                <tableColumn width="316" minWidth="40" maxWidth="1000" id="kRU-Vg-7xU">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Service">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -124,11 +119,11 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="xqb-4g-yhm">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xqb-4g-yhm">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ixA-aN-03V">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ixA-aN-03V">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -137,13 +132,32 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Q2-3u-R2z">
+                                <rect key="frame" x="437" y="225" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ymp-O1-dds">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="helpButtonClicked:" target="TbM-HR-G7m" id="nVu-b7-RTJ"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q2b-bp-JZO">
+                                <rect key="frame" x="18" y="227" width="156" height="18"/>
+                                <buttonCell key="cell" type="check" title="Show in context menu" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="cte-zj-2qv">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="q2b-bp-JZO" firstAttribute="leading" secondItem="rbi-8a-oJf" secondAttribute="leading" constant="20" id="4Hd-0H-vLg"/>
+                            <constraint firstItem="8Q2-3u-R2z" firstAttribute="top" secondItem="rbi-8a-oJf" secondAttribute="top" constant="20" id="5Gv-pA-e2b"/>
                             <constraint firstItem="zo5-4p-X8C" firstAttribute="top" secondItem="q2b-bp-JZO" secondAttribute="bottom" constant="8" id="JF6-hu-AUf"/>
                             <constraint firstAttribute="trailing" secondItem="zo5-4p-X8C" secondAttribute="trailing" constant="20" id="O01-rH-4Mb"/>
                             <constraint firstAttribute="bottom" secondItem="zo5-4p-X8C" secondAttribute="bottom" constant="20" id="QQj-Um-Mhr"/>
-                            <constraint firstItem="q2b-bp-JZO" firstAttribute="top" secondItem="rbi-8a-oJf" secondAttribute="top" constant="20" id="gUK-L9-4Nf"/>
+                            <constraint firstAttribute="trailing" secondItem="8Q2-3u-R2z" secondAttribute="trailing" constant="20" id="fgp-pc-cRD"/>
+                            <constraint firstItem="q2b-bp-JZO" firstAttribute="top" secondItem="rbi-8a-oJf" secondAttribute="top" constant="27" id="gUK-L9-4Nf"/>
                             <constraint firstItem="zo5-4p-X8C" firstAttribute="leading" secondItem="rbi-8a-oJf" secondAttribute="leading" constant="20" id="raA-l9-U5L"/>
                         </constraints>
                     </view>

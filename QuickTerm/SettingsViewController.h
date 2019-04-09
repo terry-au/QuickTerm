@@ -12,5 +12,6 @@
 
 @property(weak) IBOutlet NSButton *checkBoxContextMenu;
 @property(weak) IBOutlet NSTableView *tableView;
+- (IBAction)helpButtonClicked:(id)sender;
 
 @end
