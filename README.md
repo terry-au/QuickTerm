@@ -5,7 +5,7 @@ in the current directory. This feature is typically present in most operating sy
 but, interestingly is absent in macOS.
 
 ## Why?
-Previous utilities I used were rendered obsolete with advent of System Integrity Protection
+Previous utilities I used were rendered obsolete with the advent of System Integrity Protection
 – a feature I'd like to avoid disabling.
 
 Additionally, using the services context menu seems unnatural, as it only seems to work
